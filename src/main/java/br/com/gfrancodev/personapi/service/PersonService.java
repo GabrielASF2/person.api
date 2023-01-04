@@ -17,5 +17,20 @@ public class PersonService {
         return personRepository.findAll();
     }
 
+    public PersonEntity getUserById(Long id) {
+        return personRepository.getById(id);
+    }
+
+    public PersonEntity newUser(PersonEntity person) {
+        return personRepository.save(person);
+    }
+
+    public PersonEntity editUser(PersonEntity person) {
+        return personRepository.save(person);
+    }
+
+    public void delUser(Long id) {
+        personRepository.deleteById(id);
+    }
 }
 
