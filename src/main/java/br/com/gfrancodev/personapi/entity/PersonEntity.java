@@ -20,7 +20,7 @@ public class PersonEntity implements Serializable {
     //private String birthDate;
 
     @ManyToOne(optional = true)
-    @JoinColumn(name = "idAddress", referencedColumnName = "idAddress")
+    @JoinColumn(referencedColumnName = "id")
     private AddressEntity idAddress;
 
     public Long getId() {

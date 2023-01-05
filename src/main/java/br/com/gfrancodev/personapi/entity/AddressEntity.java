@@ -9,7 +9,7 @@ public class AddressEntity  implements Serializable {
 
     @Id
     @GeneratedValue
-    private Long idAddress;
+    private Long id;
 
     @Column(nullable = false)
     private String street;
@@ -24,11 +24,11 @@ public class AddressEntity  implements Serializable {
     private String cep;
 
     public Long getId() {
-        return idAddress;
+        return id;
     }
 
     public void setId(Long id) {
-        this.idAddress = id;
+        this.id = id;
     }
 
     public String getStreet() {
