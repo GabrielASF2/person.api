@@ -1,10 +1,11 @@
 package br.com.gfrancodev.personapi.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
-import java.text.DateFormat;
-
+import java.util.Date;
+import java.util.List;
 
 @Entity
 public class PersonEntity implements Serializable {
@@ -16,12 +17,14 @@ public class PersonEntity implements Serializable {
     @Column(nullable = false)
     private String name;
 
+    @JsonFormat(pattern="dd/MM/yyyy")
+    @Temporal(TemporalType.DATE)
     @Column(nullable = true)
-    private String birthDate;
+    private Date birthDate;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
     @JoinColumn(referencedColumnName = "id")
-    private AddressEntity address;
+    private List<AddressEntity> address;
 
     public Long getId() {
         return id;
@@ -39,19 +42,19 @@ public class PersonEntity implements Serializable {
         this.name = name;
     }
 
-    public String getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-   public void setBirthDate(String birthDate) {
+   public void setBirthDate(Date birthDate) {
        this.birthDate = birthDate;
    }
 
-    public AddressEntity getAddress() {
+    public List<AddressEntity> getAddress() {
         return address;
     }
 
-    public void setAddress(AddressEntity address) {
+    public void setAddress(List<AddressEntity> address) {
         this.address = address;
     }
 }

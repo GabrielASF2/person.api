@@ -23,6 +23,9 @@ public class AddressEntity  implements Serializable {
     @Column(nullable = true)
     private String cep;
 
+    @ManyToOne
+    private PersonEntity person;
+
     public Long getId() {
         return id;
     }
@@ -61,5 +64,13 @@ public class AddressEntity  implements Serializable {
 
     public void setCep(String cep) {
         this.cep = cep;
+    }
+
+    public PersonEntity getPerson() {
+        return person;
+    }
+
+    public void setPerson(PersonEntity person) {
+        this.person = person;
     }
 }
