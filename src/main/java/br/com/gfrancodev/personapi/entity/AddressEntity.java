@@ -11,16 +11,16 @@ public class AddressEntity  implements Serializable {
     @GeneratedValue
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String street;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String number;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String city;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String cep;
 
     public Long getId() {

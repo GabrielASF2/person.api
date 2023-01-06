@@ -17,27 +17,27 @@ public class AddressController {
     @Autowired
     private AddressRepository addressRepository;
 
-    @GetMapping("/person/address")
+    @GetMapping("/address")
     public List<AddressEntity> getAddress() {
         return addressService.getAdrress();
     }
 
-    @GetMapping("/person/address/{id}")
+    @GetMapping("/address/{id}")
     public AddressEntity getAddressById(@PathVariable Long id) {
         return addressService.getAddressById(id);
     }
 
-    @PostMapping("/person/address")
+    @PostMapping("/address")
     public AddressEntity newAddress(@RequestBody AddressEntity address) {
         return addressService.newAddress(address);
     }
 
-    @PutMapping("/person/address")
+    @PutMapping("/address")
     public AddressEntity editAddress(@RequestBody AddressEntity address) {
         return addressService.editAddress(address);
     }
 
-    @DeleteMapping("person/address/{id}")
+    @DeleteMapping("/address/{id}")
     public void delAddress(@PathVariable Long id) {
         addressService.delAddress(id);
     }

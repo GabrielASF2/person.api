@@ -16,12 +16,12 @@ public class PersonEntity implements Serializable {
     @Column(nullable = false)
     private String name;
 
-    //@Column(nullable = false)
-    //private String birthDate;
+    @Column(nullable = true)
+    private String birthDate;
 
-    @ManyToOne(optional = true)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(referencedColumnName = "id")
-    private AddressEntity idAddress;
+    private AddressEntity address;
 
     public Long getId() {
         return id;
@@ -39,19 +39,19 @@ public class PersonEntity implements Serializable {
         this.name = name;
     }
 
-   // public String getBirthDate() {
-   //     return birthDate;
-   // }
-
-   //public void setBirthDate(String birthDate) {
-   //    this.birthDate = birthDate;
-   //}
-
-    public AddressEntity getAddress() {
-        return idAddress;
+    public String getBirthDate() {
+        return birthDate;
     }
 
-    public void setAddress(AddressEntity idAddress) {
-        this.idAddress = idAddress;
+   public void setBirthDate(String birthDate) {
+       this.birthDate = birthDate;
+   }
+
+    public AddressEntity getAddress() {
+        return address;
+    }
+
+    public void setAddress(AddressEntity address) {
+        this.address = address;
     }
 }
