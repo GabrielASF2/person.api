@@ -29,35 +29,4 @@ public class PersonEntity implements Serializable {
     @JoinColumn(referencedColumnName = "id")
     private List<AddressEntity> address;
 
-    //public Long getId() {
-    //    return id;
-    //}
-//
-    //public void setId(Long id) {
-    //    this.id = id;
-    //}
-//
-    //public String getName() {
-    //    return name;
-    //}
-//
-    //public void setName(String name) {
-    //    this.name = name;
-    //}
-//
-    //public Date getBirthDate() {
-    //    return birthDate;
-    //}
-//
-   //public void setBirthDate(Date birthDate) {
-    //   this.birthDate = birthDate;
-  // }
-//
-    //public List<AddressEntity> getAddress() {
-    //    return address;
-    //}
-//
-    //public void setAddress(List<AddressEntity> address) {
-    //    this.address = address;
-    //}
 }

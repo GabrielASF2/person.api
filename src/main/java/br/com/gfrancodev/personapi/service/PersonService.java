@@ -33,8 +33,8 @@ public class PersonService {
     }
 
     public PersonEntity addAddress(Long idPerson, Long idAddress) {
-       PersonEntity person = personRepository.getReferenceById(idPerson);
-       AddressEntity address = addressRepository.getReferenceById(idAddress);
+       PersonEntity person = personRepository.findById(idPerson).get();
+       AddressEntity address = addressRepository.findById(idAddress).get();
        person.getAddress().add(address);
 
         return personRepository.save(person);
