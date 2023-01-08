@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AddressService {
@@ -13,12 +14,12 @@ public class AddressService {
     @Autowired
     private AddressRepository addressRepository;
 
-    public List<AddressEntity> getAdrress() {
+    public List<AddressEntity> getAddress() {
         return addressRepository.findAll();
     }
 
-    public AddressEntity getAddressById(Long id) {
-        return addressRepository.getById(id);
+    public Optional<AddressEntity> getAddressById(Long id) {
+        return addressRepository.findById(id);
     }
 
     public AddressEntity newAddress(AddressEntity address) {

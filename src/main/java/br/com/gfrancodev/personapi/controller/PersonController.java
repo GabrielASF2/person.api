@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class PersonController {
@@ -22,13 +23,18 @@ public class PersonController {
     }
 
     @GetMapping("/person/{id}")
-    public PersonEntity getUserById(@PathVariable Long id) {
+    public Optional<PersonEntity> getUserById(@PathVariable Long id) {
         return personService.getUserById(id);
     }
 
     @PostMapping("/person")
     public PersonEntity newUser(@RequestBody PersonEntity person) {
         return personService.newUser(person);
+    }
+
+    @PutMapping("/person/{idPerson}/address/{idAddress}")
+    public PersonEntity addAddress(@PathVariable Long idPerson, @PathVariable Long idAddress) {
+        return personService.addAddress(idPerson, idAddress);
     }
 
     @PutMapping("/person")

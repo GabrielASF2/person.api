@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class AddressController {
@@ -19,11 +20,11 @@ public class AddressController {
 
     @GetMapping("/address")
     public List<AddressEntity> getAddress() {
-        return addressService.getAdrress();
+        return addressService.getAddress();
     }
 
     @GetMapping("/address/{id}")
-    public AddressEntity getAddressById(@PathVariable Long id) {
+    public Optional<AddressEntity> getAddressById(@PathVariable Long id) {
         return addressService.getAddressById(id);
     }
 

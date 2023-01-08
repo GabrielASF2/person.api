@@ -1,10 +1,12 @@
 package br.com.gfrancodev.personapi.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.io.Serializable;
-
+@Data
 @Entity
+@NoArgsConstructor
 public class AddressEntity  implements Serializable {
 
     @Id
@@ -23,54 +25,44 @@ public class AddressEntity  implements Serializable {
     @Column(nullable = true)
     private String cep;
 
-    @ManyToOne
-    private PersonEntity person;
+   //public Long getId() {
+   //    return id;
+   //}
 
-    public Long getId() {
-        return id;
-    }
+   //public void setId(Long id) {
+   //    this.id = id;
+   //}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+   //public String getStreet() {
+   //    return street;
+   //}
 
-    public String getStreet() {
-        return street;
-    }
+   //public void setStreet(String street) {
+   //    this.street = street;
+   //}
 
-    public void setStreet(String street) {
-        this.street = street;
-    }
+   //public String getNumber() {
+   //    return number;
+   //}
 
-    public String getNumber() {
-        return number;
-    }
+   //public void setNumber(String number) {
+   //    this.number = number;
+   //}
 
-    public void setNumber(String number) {
-        this.number = number;
-    }
+   //public String getCity() {
+   //    return city;
+   //}
 
-    public String getCity() {
-        return city;
-    }
+   //public void setCity(String city) {
+   //    this.city = city;
+   //}
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+   //public String getCep() {
+   //    return cep;
+   //}
 
-    public String getCep() {
-        return cep;
-    }
+   //public void setCep(String cep) {
+   //    this.cep = cep;
+   //}
 
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
-
-    public PersonEntity getPerson() {
-        return person;
-    }
-
-    public void setPerson(PersonEntity person) {
-        this.person = person;
-    }
 }
