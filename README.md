@@ -31,26 +31,16 @@ localhost:8080/person
     ]
 }
 ```
-* ![]
+* ![https://github.com/GabrielASF2/person.api/edit/main/s](https://github.com/GabrielASF2/person.api/blob/main/screenshots/post.person.png)
 
 * PUT - Editar Pessoa
-* ![]
+* ![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/put.person.png)
 
 * GET - Listar Pessoa
-* ![]
+* ![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/get.person.png)
 
 * POST - Criar Endereço
-* ![]
+* ![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/post.address.png)
 
 * PUT - Add Endereço para pessoa
-* ![]
-
-* GET - Lista Endereço da Pessoa
-* ![]
-
-
-
-
-Badge | URL
------------- | -------------
-<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /> | [Gabriel](https://www.linkedin.com/in/gabriel-franco-dev/)<br />
+* ![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/put.personaddaddress.png)
