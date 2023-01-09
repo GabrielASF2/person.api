@@ -14,8 +14,7 @@ Avaliação Desenvolvedor Back-end Attornatus
 ## Postman
 ### Criando uma pessoa
 
-*POST - Criar pessoa -  ( Ao criar uma pessoa, ele define o primeiro endereço como endereço principal)
-localhost:8080/person
+* POST - Criar pessoa -  ( Ao criar uma pessoa, ele define o primeiro endereço como endereço principal)
 
 ```
 {
@@ -31,16 +30,16 @@ localhost:8080/person
     ]
 }
 ```
-* ![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/post.person.png)
+![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/post.person.png)
 
 * PUT - Editar Pessoa
-* ![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/put.person.png)
+![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/put.person.png)
 
 * GET - Listar Pessoa
-* ![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/get.person.png)
+![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/get.person.png)
 
 * POST - Criar Endereço
-* ![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/post.address.png)
+![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/post.address.png)
 
 * PUT - Add Endereço para pessoa
-* ![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/put.personaddaddress.png)
+![](https://github.com/GabrielASF2/person.api/blob/main/screenshots/put.personaddaddress.png)
