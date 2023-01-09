@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class PersonService {
@@ -29,7 +30,12 @@ public class PersonService {
     }
 
     public PersonEntity newUser(PersonEntity person) {
-        return personRepository.save(person);
+        PersonEntity personEntity = personRepository.save(person);
+        AddressEntity addressEntity = personEntity.getAddress().get(0);
+        UUID addressEntityId = addressEntity.getId();
+        personEntity.setPrincipalAddressId(addressEntityId);
+
+        return personRepository.save(personEntity);
     }
 
     public PersonEntity addAddress(Long idPerson, Long idAddress) {

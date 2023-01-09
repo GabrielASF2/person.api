@@ -7,15 +7,18 @@ import lombok.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 @Data
 @Entity
-@NoArgsConstructor
 public class PersonEntity implements Serializable {
 
     @Id
-    @GeneratedValue
-    private Long id;
+    @GeneratedValue(generator = "UUID")
+    private UUID id;
+
+    @Column
+    private UUID principalAddressId;
 
     @Column(nullable = false)
     private String name;
