@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 public class PersonController {
@@ -23,7 +24,7 @@ public class PersonController {
     }
 
     @GetMapping("/person/{id}")
-    public Optional<PersonEntity> getUserById(@PathVariable Long id) {
+    public Optional<PersonEntity> getUserById(@PathVariable UUID id) {
         return personService.getUserById(id);
     }
 
@@ -33,7 +34,7 @@ public class PersonController {
     }
 
     @PutMapping("/person/{idPerson}/address/{idAddress}")
-    public PersonEntity addAddress(@PathVariable Long idPerson, @PathVariable Long idAddress) {
+    public PersonEntity addAddress(@PathVariable UUID idPerson, @PathVariable UUID idAddress) {
         return personService.addAddress(idPerson, idAddress);
     }
 
@@ -43,7 +44,7 @@ public class PersonController {
     }
 
     @DeleteMapping("/person/{id}")
-    public void delUser(@PathVariable Long id) {
+    public void delUser(@PathVariable UUID id) {
         personService.delUser(id);
     }
 

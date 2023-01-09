@@ -23,7 +23,7 @@ public class PersonService {
         return personRepository.findAll();
     }
 
-    public Optional<PersonEntity> getUserById(Long id) {
+    public Optional<PersonEntity> getUserById(UUID id) {
 
         final Optional<PersonEntity> person = personRepository.findById(id);
         return person;
@@ -38,7 +38,7 @@ public class PersonService {
         return personRepository.save(personEntity);
     }
 
-    public PersonEntity addAddress(Long idPerson, Long idAddress) {
+    public PersonEntity addAddress(UUID idPerson, UUID idAddress) {
        PersonEntity person = personRepository.findById(idPerson).get();
        AddressEntity address = addressRepository.findById(idAddress).get();
        person.getAddress().add(address);
@@ -50,7 +50,7 @@ public class PersonService {
         return personRepository.save(person);
     }
 
-    public void delUser(Long id) {
+    public void delUser(UUID id) {
         personRepository.deleteById(id);
     }
 }

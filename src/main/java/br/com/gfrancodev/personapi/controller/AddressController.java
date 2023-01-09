@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 public class AddressController {
@@ -24,7 +25,7 @@ public class AddressController {
     }
 
     @GetMapping("/address/{id}")
-    public Optional<AddressEntity> getAddressById(@PathVariable Long id) {
+    public Optional<AddressEntity> getAddressById(@PathVariable UUID id) {
         return addressService.getAddressById(id);
     }
 
@@ -39,7 +40,7 @@ public class AddressController {
     }
 
     @DeleteMapping("/address/{id}")
-    public void delAddress(@PathVariable Long id) {
+    public void delAddress(@PathVariable UUID id) {
         addressService.delAddress(id);
     }
 }
